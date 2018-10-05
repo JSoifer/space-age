@@ -14,9 +14,8 @@ export class SpaceAge {
     this.planetYears = planetYears;
   }
    planetAge() {
-    return this.earthAge/this.planetYears;
+    return Math.round(this.earthAge/this.planetYears);
   }
-
-  let mercury = new SpaceAge(40,.24);
-  return Math.round(mercury.planetAge);
 }
+let mercury = new SpaceAge(40,.24);
+let mercuryAge = mercury.planetAge();

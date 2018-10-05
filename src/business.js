@@ -13,12 +13,10 @@ export class SpaceAge {
     this.earthAge = earthAge;
     this.planetYears = planetYears;
   }
-  get newAge() {
-    return this.calcAge();
+   planetAge() {
+    return this.earthAge/this.planetYears;
   }
-  calcAge() {
-    return this.earthAge / this.plantYears;
-  }
-  const mercury = new SpaceAge(40,.24);
-  return Math.round(mercury.newAge);
+
+  let mercury = new SpaceAge(40,.24);
+  return Math.round(mercury.planetAge);
 }

@@ -8,3 +8,17 @@ export function getAge() {
   return age;
 
 }
+export class SpaceAge {
+  constructor(earthAge, planetYears) {
+    this.earthAge = earthAge;
+    this.planetYears = planetYears;
+  }
+  get newAge() {
+    return this.calcAge();
+  }
+  calcAge() {
+    return this.earthAge / this.plantYears;
+  }
+  const mercury = new SpaceAge(40,.24);
+  return Math.round(mercury.newAge);
+}

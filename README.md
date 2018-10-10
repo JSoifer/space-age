@@ -11,11 +11,8 @@ This project is an age calculator to determine a person's age and remaining life
 
 ### Behavior Driven Development Specifications
 
-**This Program will calculate a users age based on inputted birthday.**
-* input: 10/5/1978
-* expected output: 40.0  
 
-**This program will calculate a persons age on Mercury based on age on Earth.**
+**This program will calculate a persons age on Mercury based on inputted age on Earth.**
 * input: 40
 * expected output: 166.67
 
@@ -56,7 +53,7 @@ Email me at: juliannesoifer@gmail.com
 
 ## Technologies Used
 
-This page was designed primarily with HTML, SASS/CSS and JavaScript with jquery integration. Developed in a webpack environment and tested using Jasmine and Karma.
+This page was designed using JavaScript with jquery integration. Developed in a webpack environment and tested using Jasmine and Karma.
 
 ### License
 

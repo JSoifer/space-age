@@ -1,22 +1,19 @@
-import { getAge, SpaceAge, planetYear } from './../src/business.js';
-
-describe( 'getAge', function() {
-
-  it('should calculate a users age based on inputted birthday', function() {
-    let inputtedBirthday = "10/05/1978";
-    var earthAge = getAge(inputtedBirthday);
-    expect(earthAge).toBe(40);
-  });
-});
+import SpaceAge from './../src/SpaceAge.js';
 
 describe( 'SpaceAge', function() {
+  let mySpaceAge = new SpaceAge(40);
 
-  it('should calculate a users age in Mercury years', function() {
-    let mercury = new SpaceAge(40,.24);
-    expect(mercury.planetAge()).toBe(167);
-  });
-  it('should calculate a users age in venus years', function() {
-    let venus = new SpaceAge(40,.62);
-    expect(venus.planetAge()).toBe(65);
-  });
 });
+
+
+
+  // it('should calculate a users age in Mercury years', function() {
+  //   let mercury = new Planet("Mercury",.24);
+  //   expect(mercury.spaceAge()).toBe(167);
+  // });
+  // it('should calculate a users age in venus years', function() {
+  //   // let venus = new SpaceAge(40,.62);
+  //   // expect(venus.planetAge()).toBe(65);
+  //   let venus = new Planet("Venus", .62);
+  //
+  // });

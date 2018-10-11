@@ -1,8 +1,11 @@
 export default class SpaceAge {
   constructor(earthAge) {
     this.earthAge = earthAge;
-    this.planetYear = 1;
   }
+  // getAge(planetYear) {
+  //   let age = Math.round(this.earthage/planetYear);
+  //   return age;
+  // }
 }
 
 

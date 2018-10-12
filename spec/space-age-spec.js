@@ -9,7 +9,13 @@ describe('SpaceAge', function() {
 
   it('should take an inputted planet and return the users age on that planet', function() {
     let mySpaceAge = new SpaceAge(40);
-    mySpaceAge.mercury();
-    expect(mySpaceAge.planetAge).toBe(95);
+    mySpaceAge.venus();
+    expect(mySpaceAge.planetAge).toBe(65);
+  });
+  it('should calculate remaining life expectancy based on demographic and current age', function() {
+    let mySpaceAge = new SpaceAge(40);
+    let inputtedGender = "Female";
+    mySpaceAge.yearsLeft();
+    expect(yearsleft).toBe(41);
   });
 });

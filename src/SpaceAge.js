@@ -7,7 +7,9 @@ export default class SpaceAge {
   }
 
   mercury() {
-    this.planetAge = Math.round(this.earthAge /.24);
+    let planetFactor = .24;
+    this.planetAge = Math.round(this.earthAge /planetFactor);
+    this.yearsLeft = Math.round((this.lifeExpectancy - this.earthAge)/planetFactor)
   }
   venus() {
     this.planetAge = Math.round(this.earthAge /.62);

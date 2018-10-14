@@ -14,8 +14,7 @@ describe('SpaceAge', function() {
   });
   it('should calculate remaining life expectancy based on demographic and current age', function() {
     let mySpaceAge = new SpaceAge(40);
-    let inputtedGender = "Female";
-    mySpaceAge.yearsLeft();
-    expect(yearsleft).toBe(41);
+    mySpaceAge.getYearsLeft("Female");
+    expect(mySpaceAge.yearsLeft).toBe(41);
   });
 });

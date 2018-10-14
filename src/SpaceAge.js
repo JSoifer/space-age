@@ -1,8 +1,9 @@
+// import $ from 'jquery';
 export default class SpaceAge {
   constructor(earthAge) {
     this.earthAge = earthAge;
     this.planetAge = 1;
-    this.lifeExpectancy = 0;
+    this.lifeExpectancy = 76;
   }
 
   mercury() {
@@ -18,17 +19,11 @@ export default class SpaceAge {
     this.planetAge = Math.round(this.earthAge /11.86);
   }
 
-  yearsLeft() {
-    let inputtedGender = "Female";
-    if (inputtedGender === "Female") {
+  getYearsLeft(inputtedDemo) {
+    if (inputtedDemo === "Female") {
       this.lifeExpectancy = 81;
-    } else if (inputtedGender === "Male") {
-      this.lifeExpectancy = 76;
     }
-    const yearsLeft = (this.lifeExpectancy - this.earthAge);
-    return yearsLeft;
-
-
+    this.yearsLeft = (this.lifeExpectancy - this.earthAge);
   }
 }
 

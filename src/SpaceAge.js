@@ -1,18 +1,25 @@
 // import $ from 'jquery';
 export default class SpaceAge {
-  constructor(earthAge) {
+  constructor(earthAge, inputtedDemo) {
     this.earthAge = earthAge;
-    this.planetAge = 1;
+    this.planetAge = earthAge;
     this.lifeExpectancy = 76;
+    if (inputtedDemo === "Female") {
+      this.lifeExpectancy = 81;
+    }
+    this.yearsLeft = (this.lifeExpectancy - this.earthAge);
   }
 
   mercury() {
     let planetFactor = .24;
     this.planetAge = Math.round(this.earthAge /planetFactor);
-    this.yearsLeft = Math.round((this.lifeExpectancy - this.earthAge)/planetFactor)
+    this.yearsLeft = Math.round((this.lifeExpectancy - this.earthAge)/planetFactor);
   }
+
   venus() {
-    this.planetAge = Math.round(this.earthAge /.62);
+    let planetFactor = .62
+    this.planetAge = Math.round(this.earthAge /planetFactor);
+    this.yearsLeft = Math.round((this.lifeExpectancy - this.earthAge)/planetFactor);
   }
   mars() {
     this.planetAge = Math.round(this.earthAge /1.88);
@@ -21,12 +28,12 @@ export default class SpaceAge {
     this.planetAge = Math.round(this.earthAge /11.86);
   }
 
-  getYearsLeft(inputtedDemo) {
-    if (inputtedDemo === "Female") {
-      this.lifeExpectancy = 81;
-    }
-    this.yearsLeft = (this.lifeExpectancy - this.earthAge);
-  }
+  // getYearsLeft() {
+  //   this.yearsLeft = (this.lifeExpectancy - this.earthAge);
+  //   // if (this.yearsLeft <= 0) {
+  //   //   alert( `You have lived ${this.yearsLeft} past your lifeExpectancy. You will probably die soon.`
+  //   //   )}
+  // }
 }
 
 
